@@ -9,6 +9,10 @@ LLM_NAME = os.getenv("LLM") or "gemma3:4b"
 SHOW_BOXES = bool(int(os.getenv("SHOW_BOXES") or "0"))
 VERBOSE = bool(int(os.getenv("VERBOSE") or "0"))
 SCALE = int(os.getenv("SCALE") or "0")
+MP_LIMIT = float(os.getenv("MP_LIMIT") or "0.92")
+NMS_THRESHOLD = float(os.getenv("NMS_THRESHOLD") or "0.5")
+OVERLAP_W=float(os.getenv("OVERLAP_W") or "0.2")
+OVERLAP_H=float(os.getenv("OVERLAP_H") or "0.2")
 
 if SCALE == 0:
     SCALE = None
